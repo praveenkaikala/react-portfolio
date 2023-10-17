@@ -1,0 +1,18 @@
+section{
+    width: 100%;
+    height:calc(100vh - 5rem);
+    display: flex;
+    justify-content: center;
+}
+.content{
+    width: 80%;
+}
+.content>span{
+    font-size: 2rem;
+    text-align: center;
+}
+.content>p{
+    font-size: 1.5rem;
+    margin-top: 100px;
+    min-width: 300px;
+}
