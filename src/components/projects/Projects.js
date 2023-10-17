@@ -1,12 +1,18 @@
 import React from 'react'
 import './projects.css'
+import image from '../../asserts/profile.png'
 
 const Projects = () => {
   return (
-    <section className='section'>
+    <section className='project'>
       <h3>my projects</h3>
       <div className='container'>
-       <a href=''>hello</a>
+         <div className='projectbox'>
+          <a href=''>
+            <p></p>
+          </a>
+         </div>
+
       </div>
     </section>
   )

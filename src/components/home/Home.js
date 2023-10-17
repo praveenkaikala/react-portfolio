@@ -3,7 +3,7 @@ import "./home.css"
 import profile from '../../asserts/profile.png'
 const Home = () => {
   return (
-    <section>
+    <section className='homesection'>
         <div className='home'>
             <div className='textpart'>
           
