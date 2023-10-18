@@ -1,0 +1,44 @@
+.contact{
+    width: 100%;
+    height: calc(100vh - 5rem);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.contact h3{
+    font-size: 2rem;
+}
+.contactbox{
+    display: flex;
+    width: 80%;
+    height: auto;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+
+}
+.contactbox>form{
+    display: flex;
+    flex-direction: column;
+}
+.contactbox>form>input{
+    width: 300px;
+    height: 25px;
+    color: aliceblue;
+    border: 1px solid rgb(196, 182, 182);
+}
+.contactbox>form>label{
+    margin-top: 20px;
+}
+.btn{
+    background-color: rgb(196, 133, 17);
+    margin-top: 20px;
+    border-style: none;
+    border-radius: 10px;
+}
+.msgbox{
+    height: 70px;
+    color: aliceblue;
+}
