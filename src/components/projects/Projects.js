@@ -8,8 +8,6 @@ const Projects = () => {
       <h3>my projects</h3>
       <div className='container'>
          <div className='projectbox'>
-          <a href=''>
-            <p></p>
           </a>
          </div>
 
