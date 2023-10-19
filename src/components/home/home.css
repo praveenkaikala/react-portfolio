@@ -3,6 +3,7 @@ section{
     height:calc(100vh - 5rem);
     display: flex;
     justify-content: center;
+    
 }
 .home{
     width: 80%;
