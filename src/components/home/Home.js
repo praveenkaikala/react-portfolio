@@ -13,7 +13,7 @@ const Home = () => {
               
             </div>
             <div className='imagepart'>
-                <img src={profile}/>
+                <img src={profile} alt='profile'/>
             </div>
         </div>
     </section>
