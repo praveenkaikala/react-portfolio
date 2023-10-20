@@ -19,12 +19,11 @@ section{
 }
 @media  screen and (max-width:600px) {
     section{
-        min-height:200px;
+        min-height:calc(100vh - 5rem);
         height: auto;
-        margin-top: 50px;
     }
     .content>p{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-top: 100px;
     }
     
