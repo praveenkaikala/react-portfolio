@@ -7,6 +7,9 @@ section{
 }
 .content{
     width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .content>span{
     font-size: 2rem;
@@ -24,7 +27,6 @@ section{
     }
     .content>p{
         font-size: 1.3rem;
-        margin-top: 100px;
     }
     
 }
