@@ -45,7 +45,10 @@
     text-align: center;
 }
 @media screen and (max-width:600px) {
-
+   .project{
+    min-height: 300px;
+    height: auto;
+   }
     .projectbox{
         width: 130px;
         height: 130px;

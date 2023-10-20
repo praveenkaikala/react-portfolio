@@ -32,6 +32,7 @@ const Skills = () => {
           <DiMongodb/>
           <p>mongoDb</p>
           </div>
+          
          
         
       </div>
