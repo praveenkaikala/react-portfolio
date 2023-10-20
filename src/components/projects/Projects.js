@@ -1,6 +1,5 @@
 import React from 'react'
 import './projects.css'
-import image from '../../asserts/profile.png'
 
 const Projects = () => {
   return (
@@ -8,7 +7,6 @@ const Projects = () => {
       <h3>my projects</h3>
       <div className='container'>
          <div className='projectbox'>
-          </a>
          </div>
 
       </div>
