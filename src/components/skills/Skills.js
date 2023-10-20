@@ -5,7 +5,7 @@ import {DiMongodb} from 'react-icons/di'
 
 const Skills = () => {
   return (
-    <section className='skills'>
+    <section className='skills' id='skills'>
       <div className='boxcontent'>
       <div className='heading'>
         <span><h3>skills</h3></span>

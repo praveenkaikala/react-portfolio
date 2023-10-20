@@ -45,14 +45,13 @@ section{
 }
 @media screen and (max-width:600px){
     .homesection{
-        margin-top: 50px;
     }
     .home{
        flex-direction: column;
        margin-top: 10px;
        justify-content: start;
        height:calc(100vh - 5rem);
-       row-gap: 100px;
+       row-gap: 50px;
     }
     .textpart{
         text-align: center;

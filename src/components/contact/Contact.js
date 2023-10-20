@@ -16,7 +16,7 @@ const Contact = () => {
       e.target.reset();
   };
   return (
-    <section className='contact'>
+    <section className='contact' id='contact'>
       <h3>contact me</h3>
       <div className='contactbox'>
       <form ref={form} onSubmit={sendEmail}>
