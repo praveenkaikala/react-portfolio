@@ -1,6 +1,6 @@
 .contact{
     width: 100%;
-    height: calc(100vh - 5rem);
+    height: calc(100vh);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -12,11 +12,14 @@
 }
 .contactbox{
     display: flex;
+    flex-direction: column;
     width: 80%;
     height: auto;
     min-height: 500px;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
+ 
 
 }
 .contactbox>form{

@@ -1,33 +1,33 @@
 .project{
-    margin-top: 50px;
+    padding-top: 50px;
     width: 100%;
-    min-height: calc(100vh - 5rem);
+    min-height: 100vh;
     height: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
-    
+    row-gap: 30px;
 }
 .project>h3{
     font-size: 2rem;
 }
-.container{
+.container {
     width: 80%;
     min-height: 300px;
     height: auto;
-   
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 30px;
-    row-gap: 30px;
+    align-items: center;
+    gap: 30px;
 }
+
 .projectbox{
-    width: 200px;
+   width: 300px;
     height: 200px;
    display: flex;
+   border-radius: 10px;
    justify-content: center;
    background-color: rgb(25, 25, 25);
     
@@ -35,6 +35,7 @@
 .projectbox>a{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .projectbox img{
     width:100%;
@@ -49,8 +50,15 @@
     min-height: calc(100vh - 5rem);
     height: auto;
    }
-    .projectbox{
-        width: 130px;
-        height: 130px;
-    }
+
+.container {
+    width: 80%;
+    min-height: 300px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
 }

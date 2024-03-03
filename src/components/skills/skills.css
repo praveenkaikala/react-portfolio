@@ -1,17 +1,18 @@
 .skills{
     
     width: 100%;
-    min-height: calc(100vh - 5rem);
+    min-height: 100vh;
     height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 
 }
 .boxcontent{
+    margin-top: 0;
     width: 80%;
     height: auto;
+    padding-top: 50px;
 }
 .heading>span{
     font-size: 2rem;
@@ -28,14 +29,15 @@
     height: auto;
     align-items: center;
 }
-.frontend{
+.frontend {
     width: 60%;
-    min-height: 200px;
+    min-height: 250px;
     height: auto;
-    background-color:rgb(25, 25, 25);
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 30px;
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px;
+    justify-content: space-around;
 }
 .frontend>h4{
     text-align: center;
@@ -43,8 +45,15 @@
     display: block;
 }
 .box{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: rgb(25, 25, 25);
+    gap: 5px;
+    align-items: center;
     min-width: 80px;
-    margin: 20px 20px 0 20px;
+   
 }
 @media screen and (max-width:600px){
     .skills{
@@ -56,15 +65,17 @@
         display: flex;
         height: auto;
     }
-    .frontend{
-        margin-top: 50px;
-        column-gap: 30px;
-      align-items: center;
-       height: auto;
-       width: 100%;
-    }
-    .boxcontent{
-        margin-top: 50px;
-    }
    
+    .box{
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        flex-direction: column;
+        background-color: rgb(25, 25, 25);
+        gap: 5px;
+        align-items: center;
+        min-width: 100px;
+        min-height: 100px;
+       
+    }
 }
