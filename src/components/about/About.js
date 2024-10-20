@@ -10,10 +10,11 @@ const About = () => {
             <span>
                <h3>about me</h3>
             </span>
-            <p>
+            <p className='aboutme'>
 
-👋 Hi, I'm praveen, a second-year B.Tech student and an enthusiastic Full Stack Developer. I thrive on crafting engaging web applications with a blend of front-end finesse and back-end robustness. I'm all about innovation, teamwork, and a commitment to lifelong learning. My passion extends beyond code, embracing a balanced life of diverse interests. Let's connect and collaborate to bring ideas to life in the digital realm!</p>
-        </motion.div>
+            Hi, I’m <strong>Praveen Kumar Kaikala</strong>, currently pursuing my <strong>B.Tech in Computer Science Engineering</strong> and working as a <strong>Frontend Developer Intern at Gymforce</strong>. I specialize in crafting engaging web applications using modern technologies like <strong>React</strong>, <strong>Next.js</strong>, and <strong>Node.js</strong>. 
+                <br/><br/>
+                I’m passionate about building user-friendly, responsive interfaces and scalable backends, always aiming for clean, efficient code. Outside of coding, I enjoy staying active with yoga and exploring new technologies that inspire creativity.</p>        </motion.div>
     </section>
   )
 }

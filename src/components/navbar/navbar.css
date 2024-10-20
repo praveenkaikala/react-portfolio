@@ -3,10 +3,12 @@ nav{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around; background-color:rgb(25, 25, 25);
+    justify-content: space-around; 
+    background: linear-gradient(135deg,#3b82f6, #45638c);
     position: sticky;
     top: 0;
     margin-top: 0;
+    z-index: 100;
 }
 .options{
     width: 50%;
@@ -52,6 +54,7 @@ nav{
     display: none;
 
 }
+
 .mobileoptions:hover{
 }
 @media  screen and (max-width:600px) {

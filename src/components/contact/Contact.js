@@ -1,66 +1,102 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Formik, Form, Field,ErrorMessage } from 'formik';
 import './contact.css'; // Your custom CSS file
-import * as yup from 'yup';
-
-
-import { Alert, Button, TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
-  const ref = useRef();
-  const [send,setSend]=useState(false)
-  const validationSchema = yup.object({
-    user_name: yup.string().required('Name is required'),
-    user_email: yup.string().email('Invalid email').required('Email is required'),
-    message: yup.string().required('Message is required'),
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
   });
+  const [errors, setErrors] = useState({});
+const [loader,setLoader]=useState(false)
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.user_name) newErrors.user_name = 'Name is required';
+    if (!formData.user_email) {
+      newErrors.user_email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.user_email)) {
+      newErrors.user_email = 'Invalid email';
+    }
+    if (!formData.message) newErrors.message = 'Message is required';
+    return newErrors;
+  };
 
   const sendEmail = () => {
-    emailjs
-      .sendForm('service_sq7j3e8', 'template_2s3dgic', ref.current, 'SxTnRoUmxsMcJHqPz')
+    try {
+      setLoader(true)
+      emailjs
+      .send('service_sq7j3e8', 'template_2s3dgic', formData, 'SxTnRoUmxsMcJHqPz')
       .then(() => {
-        console.log("Email sent successfully");
-        setSend(true)
-        setTimeout(() => {
-          setSend(false);
-        }, 2000)
+        toast.success('Email sent successfully!');
+        setFormData({ user_name: '', user_email: '', message: '' }); // Reset form
+        setErrors({}); // Clear errors
       })
       .catch((err) => {
-        console.error("Error sending email:", err);
+        console.error('Error sending email:', err);
+        toast.error('Failed to send email. Please try again later.');
       });
+    } catch (error) {
+      console.log(error)
+    }
+    finally{
+      setLoader(false)
+    }
+    
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length === 0) {
+      sendEmail(); // Call sendEmail if no validation errors
+    } else {
+      setErrors(validationErrors); // Set validation errors to state
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value }); // Update form data
   };
 
   return (
     <section className="contact" id="contact1">
       <div className="contactbox">
-        <h3>Contact me</h3>
-        <div style={{ width: "50%", backgroundColor: "white", margin: "10px", borderRadius: "20px" }}>
-          <Formik
-            initialValues={{
-              user_name: '',
-              user_email: '',
-              message: '',
-            }}
-            
-            onSubmit={(values,{resetForm})=>{
-              sendEmail()
-              resetForm()
-            }}
-          >
-            <Form ref={ref} style={{ margin: "10px", display: "flex", flexDirection: "column", gap: "10px", zIndex: -1 }}>
-              <TextField name="user_name" id="outlined-basic" label="Name" variant="outlined" />
-              <ErrorMessage name="user_name" component="div" className="error" style={{color:"red"}}/>
-              <TextField name="user_email" id="outlined-basic" label="Email" type='email' variant="outlined" />
-              <ErrorMessage name="user_email" component="div" className="error" style={{color:"red"}}/>
-              <TextField id="outlined-multiline-flexible" label="Message" multiline maxRows={4} name="message" variant="outlined" />
-              <ErrorMessage name="message" component="div" className="error" style={{color:"red"}}/>
-              <Button variant="contained" type="submit">Send</Button>
-              <p style={{color:"blue"}}>
-                {send ? "email send successfully" : ""}
-              </p>
-            </Form>
-          </Formik>
+        <h3>Contact Me</h3>
+        <div style={{ width: "70%",padding:"40px", backgroundColor: "white", margin: "10px", borderRadius: "20px" }}>
+          <form onSubmit={handleSubmit} style={{ margin: "10px", display: "flex", flexDirection: "column", gap: "10px" }}>
+            <TextField 
+              name="user_name" 
+              label="Name" 
+              variant="outlined" 
+              value={formData.user_name} 
+              onChange={handleChange} 
+            />
+            {errors.user_name && <div className="error" style={{ color: "red" }}>{errors.user_name}</div>}
+            <TextField 
+              name="user_email" 
+              label="Email" 
+              type="email" 
+              variant="outlined" 
+              value={formData.user_email} 
+              onChange={handleChange} 
+            />
+            {errors.user_email && <div className="error" style={{ color: "red" }}>{errors.user_email}</div>}
+            <TextField 
+              name="message" 
+              label="Message" 
+              multiline 
+              maxRows={4} 
+              variant="outlined" 
+              value={formData.message} 
+              onChange={handleChange} 
+            />
+            {errors.message && <div className="error" style={{ color: "red" }}>{errors.message}</div>}
+            <Button variant="contained" type="submit">{loader?"Sending":"Send"}</Button>
+          </form>
         </div>
       </div>
     </section>

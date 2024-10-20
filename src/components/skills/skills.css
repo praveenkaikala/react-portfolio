@@ -1,81 +1,80 @@
-.skills{
-    
+.skills {
     width: 100%;
-    min-height: 100vh;
-    height: auto;
+    min-height:auto;
     display: flex;
     align-items: center;
     flex-direction: column;
-
-}
-.boxcontent{
-    margin-top: 0;
+    justify-content: start;
+  }
+  
+  .boxcontent {
     width: 80%;
-    height: auto;
-    padding-top: 50px;
-}
-.heading>span{
+  }
+  
+  .heading h3 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
-}
-.heading{
-    display: block;
-}
-.mainbox{
+    color: white;
+  }
+  
+  .mainbox {
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    height: auto;
     align-items: center;
-}
-.frontend {
-    width: 60%;
-    min-height: 250px;
-    height: auto;
-   
+  }
+  
+  .frontend {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 30px;
     justify-content: space-around;
-}
-.frontend>h4{
-    text-align: center;
-    margin: 10px;
-    display: block;
-}
-.box{
+  }
+  
+  .box {
     display: flex;
-    justify-content: center;
-    border-radius: 20px;
     flex-direction: column;
-    background-color: rgb(25, 25, 25);
-    gap: 5px;
+    justify-content: center;
     align-items: center;
-    min-width: 80px;
-   
-}
-@media screen and (max-width:600px){
-    .skills{
-        height: auto;
-        min-height:calc(100vh - 5rem);
-        justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .box:hover {
+    transform: translateY(-10px);
+    background-color:rgba(250, 254, 254, 0.1);
+  }
+  
+  .box p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: white;
+    text-transform: capitalize;
+  }
+  
+  .box svg {
+    font-size: 3rem;
+    color: aqua;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .skills {
+      justify-content: flex-start;
     }
-    .mainbox{
-        display: flex;
-        height: auto;
+  
+    .mainbox {
+      flex-direction: column;
     }
-   
-    .box{
-        display: flex;
-        justify-content: center;
-        border-radius: 20px;
-        flex-direction: column;
-        background-color: rgb(25, 25, 25);
-        gap: 5px;
-        align-items: center;
-        min-width: 100px;
-        min-height: 100px;
-       
+  
+    .box {
+      min-width: 100px;
+      min-height: 100px;
     }
-}
+  }
+  

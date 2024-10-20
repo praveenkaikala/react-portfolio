@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className='options'>
         <Link activeClass='active' to='home' spy={true} smooth={true}  offset={-80} className='opt'>home</Link>
         <Link activeClass='active' to='about' spy={true} smooth={true}  offset={-40} className='opt'>about</Link>
-        <Link activeClass='active' to='skills' spy={true} smooth={true}  className='opt'>skills</Link>
+        <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-80}  className='opt'>skills</Link>
         <Link activeClass='active' to='project' spy={true} smooth={true} offset={0}  className='opt'>projects</Link>
         <Link activeClass='active' to='contact' spy={true} smooth={true}  offset={45} className='opt'>contact</Link>
     </div>

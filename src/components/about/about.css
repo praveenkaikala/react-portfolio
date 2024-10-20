@@ -1,7 +1,7 @@
 section{
     width: 100%;
     height: auto;
-    min-height:calc(100vh - 5rem);
+    min-height:calc(100vh - 10rem);
     display: flex;
     justify-content: center;
 }
@@ -21,6 +21,17 @@ section{
     margin-top: 100px;
    
 }
+.aboutme{
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    gap: 50px;
+    padding: 100px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+}
 @media  screen and (max-width:600px) {
     section{
         min-height:calc(100vh - 5rem);
@@ -28,6 +39,9 @@ section{
     }
     .content>p{
         font-size: 1.3rem;
+    }
+    .aboutme {
+        padding:30px;
     }
     
 }
