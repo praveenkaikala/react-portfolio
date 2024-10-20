@@ -1,17 +1,15 @@
-/* General section styling */
+
 .homesection {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    /* align-items: center; */
     background: linear-gradient(135deg, #1f2937, #3b82f6);
     color: white;
     padding: 20px;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh-5rem);
 }
 
-/* Home container styling */
 .home {
     display: flex;
     justify-content: space-around;
@@ -27,7 +25,7 @@
     flex-direction: row;
 }
 
-/* Text part styling */
+
 .textpart {
     width: 40%;
     min-width: 300px;
@@ -68,7 +66,6 @@
     animation: slideIn 1.4s ease-in-out;
 }
 
-/* Image part styling */
 .imagepart {
     height: 400px;
     width: 40%;
@@ -91,7 +88,6 @@
     transform: scale(1.05);
 }
 
-/* Keyframes for animations */
 @keyframes fadeIn {
     0% {
         opacity: 0;
