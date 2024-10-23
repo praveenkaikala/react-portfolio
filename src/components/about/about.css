@@ -12,6 +12,11 @@ section{
     flex-direction: column;
     padding: 50px;
 }
+#about
+{
+    margin-top: 20px;
+    height:100vh;
+}
 .content>span{
     font-size: 2rem;
     text-align: center;

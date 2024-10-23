@@ -15,7 +15,7 @@ const Home = () => {
         <div className='textpart'>
           <h3>Hello,</h3>
           <p>
-            I am <span className='name'>Praveen</span>
+            I am <span className='name'>Praveen Kumar Kaikala</span>
           </p>
           <span className='role'>Full Stack Developer</span>
         </div>

@@ -3,7 +3,7 @@ import './skills.css';
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
-import { SiMysql } from "react-icons/si";
+import { SiExpress, SiMysql } from "react-icons/si";
 import { FaDocker } from "react-icons/fa6";
 import { SiTailwindcss } from "react-icons/si";
 // Skill data in JSON format
@@ -11,11 +11,11 @@ const skillsData = [
   { icon: <FaReact />, name: 'React JS' },
   { icon: <TbBrandNextjs />, name: 'Next JS' },
   { icon: <FaNodeJs />, name: 'Node JS' },
-  { icon: <FaNodeJs />, name: 'Express JS' },
+  { icon: <SiExpress />, name: 'Express JS' },
   { icon: <DiMongodb />, name: 'MongoDB' },
   { icon: <SiMysql />, name: 'SQL' },
   { icon: <FaDocker  />, name: 'Docker' },
-  { icon: <SiTailwindcss   />, name: 'Docker' },
+  { icon: <SiTailwindcss   />, name: 'TailWind CSS' },
 ];
 
 const Skills = () => {
