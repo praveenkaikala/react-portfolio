@@ -6,19 +6,19 @@ import { SiLeetcode } from "react-icons/si";
 function Home() {
   const icons=[
     {
-      icon:<FaGithub className="w-6 h-6 text-gray-700"/>,
+      icon:<FaGithub className="w-6 h-6 "/>,
       link:"https://github.com/praveenkaikala"
     },
     {
-      icon:<FaLinkedinIn  className="w-6 h-6 text-gray-700"/>,
+      icon:<FaLinkedinIn  className="w-6 h-6 "/>,
       link:"https://linkedin.com/in/praveenkaikala"
     },
     {
-      icon:<IoMdMail className="w-6 h-6 text-gray-700"/>,
+      icon:<IoMdMail className="w-6 h-6 "/>,
       link:"mailto:kaikalapraveen24@gmail.com"
     },
     {
-      icon:<SiLeetcode  className="w-6 h-6 text-gray-700"/>,
+      icon:<SiLeetcode  className="w-6 h-6 "/>,
       link:"https://leetcode.com/u/praveenkaikala/"
     }
   ]
@@ -38,14 +38,14 @@ function Home() {
             <div className="flex space-x-4 mb-8 md:justify-start justify-center">
               {icons.map((icon,ind)=>{
                 return(
-                  <a href={icon.link} target="_blank" rel="noopener noreferrer" 
-                className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                  <a href={icon.link} target="new" rel="noopener noreferrer" 
+                className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors flex items-center hover:text-purple-600 text-gray-700">
                 {icon.icon}
               </a>
                 )
               })}
-                <a href={'https://drive.google.com/file/d/1Sq9tQX3kk4mZvFeIg7fFtjsc8QU2zxkZ/view?usp=drivesdk'}  
-                className=" rounded-full bg-purple-600 hover:bg-purple-700  transition-colors flex items-center gap-3 p-3">
+                <a href={'https://drive.google.com/file/d/19pVBmYX7w1x_SUNbgzZfk4gtFoNvom3M/view?usp=drivesdk'} target="new" 
+                className=" rounded-full bg-purple-600 hover:bg-purple-700  transition-colors flex items-center  gap-3 p-3">
                 <p>Resume</p>
                 <span><FaEye /></span>
                 </a>

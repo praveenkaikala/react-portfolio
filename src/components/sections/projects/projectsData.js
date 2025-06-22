@@ -4,7 +4,16 @@ import netflix from '../../../asserts/netflix.jpg'
 import weather from '../../../asserts/weather.jpeg'
 import yoga from '../../../asserts/yoga.jpeg'
 import tictactoe from '../../../asserts/tictactoe.jpg'
+import blinkit from '../../../asserts/blinkit.png'
 export const projectsData = [
+  {
+    title: 'Blinkit Clone',
+    description: 'Built a full-stack grocery delivery web application using MongoDB, Express.js, React.js, and Node.js.',
+    image: blinkit,
+    technologies: ['React', 'Node.js', 'MongoDB', 'Express.js'],
+    github: "https://github.com/praveenkaikala/glocery_mern",
+    live: 'https://blinkitglocary.netlify.app/',
+  },
   {
     title: 'Chatting Application',
     description: 'A full-featured chatting application platform built with React and Node.js',

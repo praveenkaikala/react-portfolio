@@ -14,10 +14,10 @@ function About() {
           
          
             <p className="text-lg text-gray-700">
-            I am a budding Full Stack Developer with hands-on experience as a frontend developer intern at Gymforce, where I contributed to developing user-friendly web applications using React and modern web technologies.
+            I am a Full Stack Developer with hands-on experience as a frontend developer intern at Gymforce, where I contributed to developing user-friendly web applications using React and modern web technologies.
             </p>
             <p className="text-lg text-gray-700">
-            Currently in my 3rd year of Computer Science Engineering, I am deeply passionate about learning and refining my skills in software development.
+            Currently in my final year of Computer Science Engineering, I am deeply passionate about learning and refining my skills in software development.
             </p>
             <p className="text-lg text-gray-700">
             My journey is driven by curiosity and a commitment to building efficient and impactful digital solutions. While I am early in my career, I am eager to explore new opportunities, grow professionally, and make meaningful contributions to the tech world.
